@@ -1,0 +1,33 @@
+<div
+  class="list-group-item flex-column align-items-start mb-4"
+  [ngClass]="{
+    'list-group-item-danger': todo.isFinished
+  }"
+>
+  <div class="d-flex w-100 justify-content-between">
+    <h5 class="mb-1">{{todo.name}}</h5>
+    <small>{{todo.date}}</small>
+  </div>
+  <p class="mb-3">
+    {{todo.description}}
+  </p>
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-12">
+      <button
+        (click)="onDelete()"
+        type="button"
+        class="btn btn-danger btn-sm"
+      >
+        Delete
+      </button>
+      <button
+        (click)="onFinished()"
+        [disabled]="todo.isFinished"
+        type="button"
+        class="btn btn-success btn-sm"
+      >
+        Finish
+      </button>
+    </div>
+  </div>
+</div>

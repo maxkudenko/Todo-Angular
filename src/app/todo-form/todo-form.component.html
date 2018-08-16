@@ -1,0 +1,23 @@
+<div class="form-group">
+  <label for="todo-name">Todo Name</label>
+  <input
+    type="text"
+    class="form-control"
+    id="todo-name"
+    [(ngModel)]="todoName"
+    placeholder="Todo Name"
+  >
+</div>
+
+<div class="form-group">
+  <label for="todo-description">Todo Description</label>
+  <input
+    type="text"
+    class="form-control"
+    id="todo-description"
+    [(ngModel)]="todoDescription"
+    placeholder="Todo Description"
+  >
+</div>
+
+<button type="button" (click)="onAdd()" class="btn btn-outline-primary">Add Todo</button>

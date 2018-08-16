@@ -1,0 +1,12 @@
+<div class="container">
+
+  <app-todo-form></app-todo-form>
+
+  <div class="list-group mt-4">
+    <app-todo
+      [todo]="t"
+      *ngFor="let t of (todoState | async).todos"
+    ></app-todo>
+  </div>
+
+</div>
